@@ -3,112 +3,230 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rishikesh A - Portfolio</title>
+<title>Rishikesh A | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#111827,#020617);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:#06b6d4;
+    border-radius:50%;
+    filter:blur(150px);
+    top:-100px;
+    left:-100px;
+    opacity:.3;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    width:350px;
+    height:350px;
+    background:#8b5cf6;
+    border-radius:50%;
+    filter:blur(150px);
+    bottom:-100px;
+    right:-100px;
+    opacity:.3;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 10px 40px rgba(0,0,0,.4);
+    position:relative;
+    z-index:1;
+}
+
+.header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.profile-pic{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    margin:auto;
+    margin-bottom:20px;
+    border:4px solid #06b6d4;
+    background:linear-gradient(135deg,#06b6d4,#8b5cf6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:48px;
+    font-weight:bold;
+    color:white;
+    box-shadow:0 0 30px rgba(6,182,212,.4);
+}
+
+.header h1{
+    font-size:3rem;
+    background:linear-gradient(90deg,#06b6d4,#8b5cf6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.header p{
+    color:#cbd5e1;
+    font-size:1.1rem;
+}
+
+.section{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+.section:hover{
+    transform:translateY(-5px);
+    border-color:#06b6d4;
+    box-shadow:0 10px 25px rgba(6,182,212,.15);
+}
+
+.section h2{
+    color:#06b6d4;
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
+
+.section p{
+    color:#d1d5db;
+    line-height:1.8;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    background:linear-gradient(135deg,#06b6d4,#8b5cf6);
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:.95rem;
+    font-weight:500;
+}
+
+.contact a{
+    color:#06b6d4;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.contact a:hover{
+    color:#8b5cf6;
+}
+
+.footer{
+    text-align:center;
+    margin-top:20px;
+    color:#94a3b8;
+    font-size:.9rem;
+}
+
+@media(max-width:768px){
+
+    .container{
+        padding:25px;
     }
 
-    body {
-        background: #f4f4f4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
+    .header h1{
+        font-size:2.2rem;
     }
 
-    .container {
-        background: white;
-        width: 80%;
-        max-width: 800px;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    .profile-pic{
+        width:100px;
+        height:100px;
+        font-size:38px;
     }
-
-    .header {
-        text-align: center;
-        margin-bottom: 25px;
-    }
-
-    .header h1 {
-        color: #333;
-        margin-bottom: 10px;
-    }
-
-    .header p {
-        color: #666;
-        font-size: 18px;
-    }
-
-    .section {
-        margin-bottom: 20px;
-    }
-
-    .section h2 {
-        color: #0077cc;
-        margin-bottom: 10px;
-        border-bottom: 2px solid #0077cc;
-        display: inline-block;
-        padding-bottom: 5px;
-    }
-
-    .section p, .section li {
-        color: #444;
-        line-height: 1.8;
-    }
-
-    ul {
-        margin-left: 20px;
-    }
-
-    .contact a {
-        color: #0077cc;
-        text-decoration: none;
-    }
-
-    .contact a:hover {
-        text-decoration: underline;
-    }
+}
 </style>
 </head>
 <body>
 
 <div class="container">
+
     <div class="header">
+        <div class="profile-pic">R</div>
         <h1>Rishikesh A</h1>
-        <p>BCA Student</p>
+        <p>BCA Student | Future Software Developer</p>
     </div>
 
     <div class="section">
-        <h2>Personal Details</h2>
+        <h2>👤 Personal Details</h2>
         <p><strong>Name:</strong> Rishikesh A</p>
         <p><strong>Age:</strong> 20</p>
     </div>
 
     <div class="section">
-        <h2>Education</h2>
-        <p><strong>Higher Secondary:</strong> Kalladi HSS, Mannarkkad</p>
-        <p><strong>Current Education:</strong> BCA Student at Yuvakshetra Institute of Management Studies, Mundur, Palakkad</p>
+        <h2>🎓 Education</h2>
+        <p>
+            <strong>Higher Secondary:</strong><br>
+            Kalladi HSS, Mannarkkad
+        </p>
+        <br>
+        <p>
+            <strong>Current Education:</strong><br>
+            BCA Student at Yuvakshetra Institute of Management Studies,
+            Mundur, Palakkad
+        </p>
     </div>
 
     <div class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li>SQL</li>
-            <li>Python</li>
-            <li>C++</li>
-        </ul>
+        <h2>💻 Skills</h2>
+        <div class="skills">
+            <div class="skill">SQL</div>
+            <div class="skill">Python</div>
+            <div class="skill">C++</div>
+        </div>
     </div>
 
     <div class="section contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:r96098286@gmail.com">r96098286@gmail.com</a></p>
+        <h2>📧 Contact</h2>
+        <p>
+            Email:
+            <a href="mailto:r96098286@gmail.com">
+                r96098286@gmail.com
+            </a>
+        </p>
     </div>
+
+    <div class="footer">
+        © 2026 Rishikesh A • Portfolio Website
+    </div>
+
 </div>
 
 </body>
